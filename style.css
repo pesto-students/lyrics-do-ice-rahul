@@ -1,0 +1,159 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.search{
+    width: 100%;
+    padding-bottom: 6vw;
+    position: relative;
+}
+
+.search::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url(assets/hero-background.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: -1;
+  }
+
+.search h1{
+    margin: 0;
+    padding-top: 6.8vw;
+    color: white;
+    font-size: 30px;
+}
+
+.search p{
+    width: 30.5%;
+    padding: 0vw 2vw;
+    background-color: white;
+    color: #7d7d7d;
+    margin: 2.2vw auto 0vw auto;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+}
+
+.search p span {
+    position: absolute;
+    right: 8px;
+    top: 6px;
+}
+
+.button{
+    padding: 10px 15px;
+    background-color: #5c6ac4;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input#search{
+    line-height: 36px;
+    margin: 6px 0px;
+    font-size: 16px;
+    width: 75%;
+    border: 0;
+    outline: none;
+}
+
+input#search:focus{
+    background-color: #e8f0fd;
+    color: black;
+}
+
+.search p:focus{
+    background-color: #e8f0fd;
+}
+
+.result{
+    margin-top: 2vw;
+}
+
+.result p{
+    text-align: left;
+    width: 40%;
+    padding: 15px;
+    margin: 10px auto;
+    box-shadow: 2px 6px 10px lightgrey;
+    position: relative;
+}
+
+.result p span.showLyrics {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    font-size: 12px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    background-color: #5c6ac4;
+    color: white;
+    cursor: pointer;
+}
+
+.result p span.artistTitle{
+    display: block;
+    width: 80%;
+}
+
+.result p div {
+    width: 100%;
+    font-size: 2vw;
+}
+
+.result p span.heading{
+    font-size: 2vw;
+}
+
+.paginationButton{
+    width: 40%;
+    margin: 25px auto;
+}
+
+#loading{
+    vertical-align: middle;
+    width: 4vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    .search p  {
+      width: 40%;
+    }
+    .result p span.artistTitle {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .search p  {
+      width: 60%;
+    }
+    .result p {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .search p  {
+      width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    input#search {
+      width: 70%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .search p  {
+      width: 90%;
+    }
+}

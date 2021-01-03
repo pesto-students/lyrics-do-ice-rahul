@@ -66,7 +66,7 @@ function renderList(response) {
 
   let str = '';
   for (let i = 0; i < data.length; i += 1) {
-    str += `<p><span class="artistTitle"><strong> ${data[i].artist.name} </strong> - ${data[i].title} </span><span artist="${data[i].artist.name}" title="${data[i].title}" id="${data[i].id}" onclick="cacheLyrics(getLyrics)(this)" class="showLyrics">Show Lyrics</span></p>`;
+    str += `<p><span class="artistTitle"><strong> ${data[i].artist.name} </strong> - ${data[i].title} </span><span artist="${data[i].artist.name}" title="${data[i].title}" id="${data[i].id}" class="showLyrics">Show Lyrics</span></p>`;
   }
   document.getElementById('searchResult').innerHTML = str;
   document.getElementById('loading').style.display = 'none';
@@ -92,9 +92,8 @@ function cacheList(func) {
 }
 
 /*
-* fetch lyrics from server
-*/
-// eslint-disable-next-line no-unused-vars
+  * fetch lyrics from server
+  */
 async function getLyrics(queryString) {
   const artist = queryString.getAttribute('artist');
   const title = queryString.getAttribute('title');
@@ -130,7 +129,6 @@ function renderLyrics(response) {
 /*
 * cache lyrics already queried
 */
-// eslint-disable-next-line no-unused-vars
 function cacheLyrics(func) {
   return (...args) => {
     const key = args[0].getAttribute('id');
@@ -146,6 +144,13 @@ function cacheLyrics(func) {
     return cachedData[key];
   };
 }
+
+/*
+* fetch lyrics using event delegation
+*/
+document.getElementById('searchResult').addEventListener('click', (e) => {
+  cacheLyrics(getLyrics)(document.getElementById(e.target.id));
+});
 
 /*
 * fetch list of lyrics on click of search button

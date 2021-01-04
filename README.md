@@ -35,3 +35,7 @@ https://api.lyrics.ovh/suggest/inputQuery
 # Commands
 
 - Run `npm run develop` to run app locally
+
+# URL for the Hosted Project
+
+[https://ice-rahul.github.io/lyrics](https://ice-rahul.github.io/lyrics)

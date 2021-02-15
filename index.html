@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <section class="search">
-            <h1>LyricsDo</h1>
-            <p id="searchBar">
-                <input name="search" id="search" placeholder="Enter artist or song name..." />
-                <span class="button" id="searchbtn">Search</span>
-            </p>
-        </section>
-        
-        <section class="result" id="searchResult">
-            <span>Results will be displayed here</span>
-        </section>
-        <div class="paginationButton">
-            <span class="button" id="prev">Prev</span>
-            <img id="loading" src="assets/loading.svg">
-            <span class="button" id="next">Next</span>
-        </div>
-        <script src="scripts.js" async defer></script>
-    </body>
+<htm lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="search">
+      <h1>LyricsDo</h1>
+      <p id="searchBar">
+        <input
+          name="search"
+          id="search"
+          placeholder="Enter artist or song name..."
+        />
+        <span class="button" id="searchbtn">Search</span>
+      </p>
+    </section>
+
+    <section class="result" id="searchResult">
+      <span>Results will be displayed here</span>
+    </section>
+    <div class="paginationButton">
+      <span class="button" id="prev">Prev</span>
+      <img id="loading" alt="loading image" src="assets/loading.svg" />
+      <span class="button" id="next">Next</span>
+    </div>
+    <script src="scripts.js" type="module"></script>
+  </body>
 </html>

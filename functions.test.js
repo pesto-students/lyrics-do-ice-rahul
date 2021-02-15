@@ -1,4 +1,4 @@
-const { fetchSuggestList, getLyrics } = require('./functions');
+import { fetchSuggestList, getLyrics } from './functions';
 
 test('Count of lyrics suggestion in one page', () => {
   const myHeaders = { 'Accept-Charset': 'utf-8', 'Content-Type': 'application/json' };
